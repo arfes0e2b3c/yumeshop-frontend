@@ -44,3 +44,7 @@ yarn-error.log*
 
 # generated
 api/
+
+# .yarn
+
+.yarn
