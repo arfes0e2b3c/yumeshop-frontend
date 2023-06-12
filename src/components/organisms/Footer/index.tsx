@@ -5,6 +5,7 @@ import { colors } from 'src/styles/Tokens';
 import Link from 'next/link';
 // eslint-disable-next-line import/no-unresolved
 import { tb } from 'src/styles/Media';
+import { menus } from './Const';
 
 const Wrapper = styled.footer`
   width: 100%;
@@ -63,65 +64,6 @@ const CopyrightText = styled.p`
     font-size: 12px;
   `}
 `;
-
-type Menu = {
-  id: number;
-  text: string;
-  href: string;
-};
-
-const menus: Menu[] = [
-  {
-    id: 1,
-    text: 'メニューメニュー',
-    href: '/',
-  },
-  {
-    id: 2,
-    text: 'メニューメニュー',
-    href: '/',
-  },
-  {
-    id: 3,
-    text: 'メニュー',
-    href: '/',
-  },
-  {
-    id: 4,
-    text: 'メニューメニュー',
-    href: '/',
-  },
-  {
-    id: 5,
-    text: 'メニュー',
-    href: '/',
-  },
-  {
-    id: 6,
-    text: 'メニュー',
-    href: '/',
-  },
-  {
-    id: 7,
-    text: 'メニュー',
-    href: '/',
-  },
-  {
-    id: 8,
-    text: 'メニューメニュー',
-    href: '/',
-  },
-  {
-    id: 9,
-    text: 'メニューメニュー',
-    href: '/',
-  },
-  {
-    id: 10,
-    text: 'メニューメニュー',
-    href: '/',
-  },
-];
 
 export const Footer: FC = () => (
   <Wrapper>
