@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+// eslint-disable-next-line import/no-unresolved
 import { colors } from 'src/styles/Tokens';
 import Link from 'next/link';
 
@@ -17,6 +18,7 @@ const Wrapper = styled.footer`
 
 const MenuContainer = styled.div`
   width: 100%;
+  max-width: 1024px;
   display: flex;
   justify-content: flex-start;
 `;
