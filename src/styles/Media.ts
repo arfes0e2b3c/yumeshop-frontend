@@ -22,6 +22,7 @@ export const tb = (
     ${css(first, ...interpolations)}
   }
 `;
+
 export const pc = (
   first: CSSObject | TemplateStringsArray,
   ...interpolations: SimpleInterpolation[]
