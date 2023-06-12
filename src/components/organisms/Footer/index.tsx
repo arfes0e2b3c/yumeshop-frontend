@@ -12,7 +12,7 @@ const Wrapper = styled.footer`
   justify-content: center;
 `;
 
-export const Footer: VFC = () => (
+export const Footer: FC = () => (
   <Wrapper>
     <p>Copyright {new Date().getFullYear()} YumemiShop</p>
   </Wrapper>
