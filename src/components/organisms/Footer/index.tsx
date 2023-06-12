@@ -12,8 +12,13 @@ const Wrapper = styled.footer`
   justify-content: center;
 `;
 
+const CopyrightText = styled.p`
+  margin-top: 32px;
+`;
 export const Footer: FC = () => (
   <Wrapper>
-    <p>Copyright {new Date().getFullYear()} YumemiShop</p>
+    <CopyrightText>
+      Copyright {new Date().getFullYear()} YumemiShop
+    </CopyrightText>
   </Wrapper>
 );
