@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Wrapper = styled.footer`
   width: 100%;
-  padding: 16px 32px;
+  padding: 16px 64px;
   font-size: 12px;
   background-color: ${colors.White};
   display: flex;
@@ -18,19 +18,18 @@ const Wrapper = styled.footer`
 
 const MenuContainer = styled.div`
   width: 100%;
-  max-width: 1024px;
   display: flex;
   justify-content: flex-start;
 `;
 
 const MenuInner = styled.div`
-  width: 375px;
+  width: 520px;
   display: flex;
   flex-wrap: wrap;
 `;
 
 const MenuWrapper = styled.div`
-  padding: 0px 10px;
+  padding: 0px 16px;
   margin: 4px 0;
   :not(:last-child) {
     border-right: 1px solid #000;
@@ -39,10 +38,12 @@ const MenuWrapper = styled.div`
 
 const StyledLink = styled(Link)`
   text-decoration: underline;
+  font-size: 18px;
 `;
 
 const CopyrightText = styled.p`
   margin-top: 32px;
+  font-size: 18px;
 `;
 
 type Menu = {
