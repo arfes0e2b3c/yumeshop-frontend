@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // eslint-disable-next-line import/no-unresolved
 import { colors } from 'src/styles/Tokens';
 import Link from 'next/link';
+import { mb, tb } from 'src/styles/Media';
 
 const Wrapper = styled.footer`
   width: 100%;
@@ -14,6 +15,12 @@ const Wrapper = styled.footer`
   align-items: center;
   justify-content: center;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  ${tb`
+      padding: 16px;
+  `}
+  ${mb`
+      padding: 16px;
+  `}
 `;
 
 const MenuContainer = styled.div`
@@ -26,6 +33,12 @@ const MenuInner = styled.div`
   width: 520px;
   display: flex;
   flex-wrap: wrap;
+  ${mb`
+    width: 375px;
+  `}
+  ${tb`
+    width: 375px;
+  `}
 `;
 
 const MenuWrapper = styled.div`
@@ -34,16 +47,36 @@ const MenuWrapper = styled.div`
   :not(:last-child) {
     border-right: 1px solid #000;
   }
+  ${mb`
+    padding: 0px 8px;
+  `}
+  ${tb`
+    padding: 0px 8px;
+  `}
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: underline;
   font-size: 18px;
+  ${mb`
+    font-size: 12px;
+  `}
+  ${tb`
+    font-size: 12px;
+  `}
 `;
 
 const CopyrightText = styled.p`
   margin-top: 32px;
   font-size: 18px;
+  ${tb`
+    margin-top: 64px;
+    font-size: 12px;
+  `}
+  ${mb`
+    margin-top: 64px;
+    font-size: 12px;
+  `}
 `;
 
 type Menu = {
