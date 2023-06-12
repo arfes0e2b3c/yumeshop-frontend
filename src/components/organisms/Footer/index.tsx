@@ -138,6 +138,7 @@ const menus: Menu[] = [
     href: '/',
   },
 ];
+
 export const Footer: FC = () => (
   <Wrapper>
     <MenuContainer>
