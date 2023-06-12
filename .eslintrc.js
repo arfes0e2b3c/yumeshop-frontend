@@ -41,6 +41,7 @@ module.exports = {
     ],
     'react/function-component-definition': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-unresolved': 'off',
     'react/jsx-filename-extension': [
       'error',
       {
@@ -48,28 +49,31 @@ module.exports = {
       },
     ],
     'react/jsx-props-no-spreading': 'off',
-    'import/no-extraneous-dependencies': ['error', {
-      // devDependenciesのimportを許容
-      devDependencies: true
-    }],
-    'storybook/prefer-pascal-case': 'off'
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        // devDependenciesのimportを許容
+        devDependencies: true,
+      },
+    ],
+    'storybook/prefer-pascal-case': 'off',
   },
   overrides: [
     {
-      'files': ['*.tsx'],
-      'rules': {
+      files: ['*.tsx'],
+      rules: {
         'react/prop-types': 'off',
       },
     },
   ],
-  "settings": {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
-    "import/resolver": {
-      "typescript": {
-        "alwaysTryTypes": true,
-      }
-    }
-  }
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+    },
+  },
 };

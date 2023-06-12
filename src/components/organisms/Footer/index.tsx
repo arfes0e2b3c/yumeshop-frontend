@@ -1,9 +1,7 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-// eslint-disable-next-line import/no-unresolved
 import { colors } from 'src/styles/Tokens';
 import Link from 'next/link';
-// eslint-disable-next-line import/no-unresolved
 import { tb } from 'src/styles/Media';
 import { menus } from './Const';
 
