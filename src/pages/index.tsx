@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
+// eslint-disable-next-line import/no-unresolved
 import { Container, Main, Title, TokenTest } from 'src/styles/Home';
 
 const Home: NextPage = () => (

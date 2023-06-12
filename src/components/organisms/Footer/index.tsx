@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // eslint-disable-next-line import/no-unresolved
 import { colors } from 'src/styles/Tokens';
 import Link from 'next/link';
+// eslint-disable-next-line import/no-unresolved
 import { mb, tb } from 'src/styles/Media';
 
 const Wrapper = styled.footer`
