@@ -45,7 +45,13 @@ const CopyrightText = styled.p`
   margin-top: 32px;
 `;
 
-const menus = [
+type Menu = {
+  id: number;
+  text: string;
+  href: string;
+};
+
+const menus: Menu[] = [
   {
     id: 1,
     text: 'メニューメニュー',
