@@ -37,9 +37,16 @@ const MenuRow = styled.div`
 `;
 
 const MenuWrapper = styled.div`
+  position: relative;
   padding: 0px 16px;
   margin: 4px 0;
-  :not(:last-child) {
+  :not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 80%;
     border-right: 1px solid #000;
   }
   ${tb`
