@@ -18,16 +18,7 @@ export const tb = (
   first: CSSObject | TemplateStringsArray,
   ...interpolations: SimpleInterpolation[]
 ): FlattenSimpleInterpolation => css`
-  @media (min-width: 768px) and (max-width: 1151px) {
-    ${css(first, ...interpolations)}
-  }
-`;
-
-export const pc = (
-  first: CSSObject | TemplateStringsArray,
-  ...interpolations: SimpleInterpolation[]
-): FlattenSimpleInterpolation => css`
-  @media (min-width: 1152px) {
+  @media (max-width: 1151px) {
     ${css(first, ...interpolations)}
   }
 `;
