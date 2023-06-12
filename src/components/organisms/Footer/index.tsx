@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { colors } from 'src/styles/Tokens';
 import Link from 'next/link';
 import { tb } from 'src/styles/Media';
-import { menus } from './Const';
+import { menusFirst, menusSecond, menusThird } from './Const';
 
 const Wrapper = styled.footer`
   width: 100%;
@@ -23,10 +23,11 @@ const Wrapper = styled.footer`
 const MenuContainer = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
 `;
 
-const MenuInner = styled.div`
+const MenuRow = styled.div`
   width: 520px;
   display: flex;
   flex-wrap: wrap;
@@ -66,13 +67,27 @@ const CopyrightText = styled.p`
 export const Footer: FC = () => (
   <Wrapper>
     <MenuContainer>
-      <MenuInner>
-        {menus.map((menu) => (
+      <MenuRow>
+        {menusFirst.map((menu) => (
           <MenuWrapper key={menu.id}>
             <StyledLink href={menu.href}>{menu.text}</StyledLink>
           </MenuWrapper>
         ))}
-      </MenuInner>
+      </MenuRow>
+      <MenuRow>
+        {menusSecond.map((menu) => (
+          <MenuWrapper key={menu.id}>
+            <StyledLink href={menu.href}>{menu.text}</StyledLink>
+          </MenuWrapper>
+        ))}
+      </MenuRow>
+      <MenuRow>
+        {menusThird.map((menu) => (
+          <MenuWrapper key={menu.id}>
+            <StyledLink href={menu.href}>{menu.text}</StyledLink>
+          </MenuWrapper>
+        ))}
+      </MenuRow>
     </MenuContainer>
     <CopyrightText>
       Copyright {new Date().getFullYear()} YumemiShop

@@ -4,7 +4,7 @@ type Menu = {
   href: string;
 };
 
-export const menus: Menu[] = [
+export const menusFirst: Menu[] = [
   {
     id: 1,
     text: 'メニューメニュー',
@@ -20,6 +20,9 @@ export const menus: Menu[] = [
     text: 'メニュー',
     href: '/',
   },
+];
+
+export const menusSecond: Menu[] = [
   {
     id: 4,
     text: 'メニューメニュー',
@@ -40,6 +43,9 @@ export const menus: Menu[] = [
     text: 'メニュー',
     href: '/',
   },
+];
+
+export const menusThird: Menu[] = [
   {
     id: 8,
     text: 'メニューメニュー',
