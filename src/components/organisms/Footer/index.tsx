@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { colors } from 'src/styles/Tokens';
 import Link from 'next/link';
 import { tb } from 'src/styles/media';
-import { menusFirst, menusSecond, menusThird } from './const';
+import { menus } from './const';
 
 const Wrapper = styled.footer`
   width: 100%;
@@ -75,21 +75,21 @@ export const Footer: FC = () => (
   <Wrapper>
     <MenuContainer>
       <MenuRow>
-        {menusFirst.map((menu) => (
+        {menus.first.map((menu) => (
           <MenuWrapper key={menu.id}>
             <StyledLink href={menu.href}>{menu.text}</StyledLink>
           </MenuWrapper>
         ))}
       </MenuRow>
       <MenuRow>
-        {menusSecond.map((menu) => (
+        {menus.second.map((menu) => (
           <MenuWrapper key={menu.id}>
             <StyledLink href={menu.href}>{menu.text}</StyledLink>
           </MenuWrapper>
         ))}
       </MenuRow>
       <MenuRow>
-        {menusThird.map((menu) => (
+        {menus.third.map((menu) => (
           <MenuWrapper key={menu.id}>
             <StyledLink href={menu.href}>{menu.text}</StyledLink>
           </MenuWrapper>
