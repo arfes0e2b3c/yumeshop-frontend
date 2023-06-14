@@ -2,8 +2,8 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { colors } from 'src/styles/Tokens';
 import Link from 'next/link';
-import { tb } from 'src/styles/Media';
-import { menusFirst, menusSecond, menusThird } from './Const';
+import { tb } from 'src/styles/media';
+import { menusFirst, menusSecond, menusThird } from './const';
 
 const Wrapper = styled.footer`
   width: 100%;
