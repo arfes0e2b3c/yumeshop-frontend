@@ -28,12 +28,7 @@ const MenuContainer = styled.div`
 `;
 
 const MenuRow = styled.div`
-  width: 520px;
   display: flex;
-  flex-wrap: wrap;
-  ${tb`
-    width: 375px;
-  `}
 `;
 
 const MenuWrapper = styled.div`
