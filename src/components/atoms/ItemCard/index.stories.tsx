@@ -1,14 +1,14 @@
 import { StoryObj, Meta } from '@storybook/react';
-import { ItemCard } from '.';
+import { ProductCard } from '.';
 
-const meta: Meta<typeof ItemCard> = {
+const meta: Meta<typeof ProductCard> = {
   title: 'atoms/ItemCard',
-  component: ItemCard,
+  component: ProductCard,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof ItemCard>;
+type Story = StoryObj<typeof ProductCard>;
 export const Default: Story = {
   args: {
     id: '57c3ff77-d8bd-41bb-86e3-4526e1b2186c',

@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { tb } from 'src/styles/media';
 import styled from 'styled-components';
 
-const ItemCardContainer = styled.div`
+const ProductCardContainer = styled.div`
   width: 244px;
   border-radius: 8px;
   overflow: hidden;
@@ -14,7 +14,7 @@ const ItemCardContainer = styled.div`
     `}
 `;
 
-const ItemImage = styled(Image)`
+const ProductImage = styled(Image)`
   vertical-align: top;
   width: 100%;
   height: auto;
@@ -22,7 +22,7 @@ const ItemImage = styled(Image)`
   object-fit: cover;
 `;
 
-const ItemTitle = styled.div`
+const ProductTitle = styled.div`
   font-size: 18px;
   margin: 8px;
   ${tb`
@@ -30,22 +30,22 @@ const ItemTitle = styled.div`
   `}
 `;
 
-type ItemCardProps = {
-  id: string;
+type ProductCardProps = {
+  path: string;
   name: string;
   thumbnail: string;
 };
 
-export const ItemCard: FC<ItemCardProps> = ({ name, id, thumbnail }) => (
+export const ProductCard: FC<ProductCardProps> = ({ name, id, thumbnail }) => (
   <Link href={`/detail/${id}`}>
-    <ItemCardContainer>
-      <ItemImage
+    <ProductCardContainer>
+      <ProductImage
         src={thumbnail}
         alt="商品のサムネイル画像"
         width={244}
         height={244}
       />
-      <ItemTitle>{name}</ItemTitle>
-    </ItemCardContainer>
+      <ProductTitle>{name}</ProductTitle>
+    </ProductCardContainer>
   </Link>
 );
