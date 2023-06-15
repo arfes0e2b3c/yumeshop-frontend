@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Container = styled.section`
   display: flex;
   align-items: flex-end;
+  column-gap: 8px;
 `;
 
 const TaxExcluded = styled.div`
