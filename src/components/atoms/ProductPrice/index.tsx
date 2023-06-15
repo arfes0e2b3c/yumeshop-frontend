@@ -7,10 +7,6 @@ const Container = styled.section`
   align-items: flex-end;
 `;
 
-const PriceWrapper = styled.div`
-  display: flex;
-`;
-
 const TaxExcluded = styled.div`
   font-size: ${fontSizes.fontSize24};
   font-style: ${fonts.NotoSansJP};
@@ -26,6 +22,7 @@ const DiscountedSellingPrice = styled.div`
   color: ${colors.Red};
   font-size: ${fontSizes.fontSize36};
   font-style: ${fonts.Roboto};
+  line-height: 1.2;
 `;
 
 const DiscountedYen = styled.div`
@@ -38,6 +35,7 @@ const NormalSellingPrice = styled.div`
   color: ${colors.Black};
   font-size: ${fontSizes.fontSize36};
   font-style: ${fonts.Roboto};
+  line-height: 1.2;
 `;
 
 const NormalYen = styled.div`
@@ -60,16 +58,16 @@ export const ProductPrice: FC<ProductPriceProps> = ({
   <Container>
     <TaxExcluded>税抜</TaxExcluded>
     {discounted ? (
-      <PriceWrapper>
+      <>
         <DiscountedOriginalPrice>{originalPrice}→</DiscountedOriginalPrice>
         <DiscountedSellingPrice>{sellingPrice}</DiscountedSellingPrice>
         <DiscountedYen>円</DiscountedYen>
-      </PriceWrapper>
+      </>
     ) : (
-      <PriceWrapper>
+      <>
         <NormalSellingPrice>{sellingPrice}</NormalSellingPrice>
         <NormalYen>円</NormalYen>
-      </PriceWrapper>
+      </>
     )}
   </Container>
 );
