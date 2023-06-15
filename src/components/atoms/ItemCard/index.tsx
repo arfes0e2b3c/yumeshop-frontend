@@ -36,8 +36,12 @@ type ProductCardProps = {
   thumbnail: string;
 };
 
-export const ProductCard: FC<ProductCardProps> = ({ name, id, thumbnail }) => (
-  <Link href={`/detail/${id}`}>
+export const ProductCard: FC<ProductCardProps> = ({
+  name,
+  path,
+  thumbnail,
+}) => (
+  <Link href={path}>
     <ProductCardContainer>
       <ProductImage
         src={thumbnail}

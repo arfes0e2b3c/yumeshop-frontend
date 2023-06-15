@@ -11,7 +11,7 @@ export default meta;
 type Story = StoryObj<typeof ProductCard>;
 export const Default: Story = {
   args: {
-    id: '57c3ff77-d8bd-41bb-86e3-4526e1b2186c',
+    path: '/detail/57c3ff77-d8bd-41bb-86e3-4526e1b2186c',
     name: 'ボールペン',
     thumbnail: 'https://picsum.photos/id/1/300/300',
   },
