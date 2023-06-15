@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
-import { colors, fontSizes } from 'src/styles/Tokens';
+import { colors, fontSizes, fonts } from 'src/styles/Tokens';
+import { tb } from 'src/styles/media';
 import styled from 'styled-components';
 
 const Container = styled.section<{ color: string }>`
@@ -12,7 +13,11 @@ const Container = styled.section<{ color: string }>`
 const TagText = styled.p`
   padding: 0 8px;
   font-size: ${fontSizes.fontSize22};
-  line-height: 32px;
+  font-family: ${fonts.NotoSansJP};
+  ${tb`
+    padding: 0 4px;
+    font-size: ${fontSizes.fontSize12};
+  `}
 `;
 
 type ProductTagProps = {
