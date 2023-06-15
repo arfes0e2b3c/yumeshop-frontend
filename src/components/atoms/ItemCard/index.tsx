@@ -17,6 +17,8 @@ const ItemCardContainer = styled.div`
 const ItemImage = styled(Image)`
   vertical-align: top;
   width: 100%;
+  height: auto;
+  aspect-ratio: 1;
   object-fit: cover;
 `;
 
