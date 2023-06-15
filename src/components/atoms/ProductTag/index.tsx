@@ -3,9 +3,9 @@ import { FC } from 'react';
 import { colors, fontSizes } from 'src/styles/Tokens';
 import styled from 'styled-components';
 
-const Container = styled.section`
+const Container = styled.section<{ color: string }>`
   width: fit-content;
-  background-color: ${colors.Black};
+  background-color: ${(props) => props.color};
   color: ${colors.White};
 `;
 
@@ -23,7 +23,7 @@ type ProductTagProps = {
 
 export const ProductTag: FC<ProductTagProps> = ({ path, name, color }) => (
   <Link href={path}>
-    <Container>
+    <Container color={color}>
       <TagText>{name}</TagText>
     </Container>
   </Link>
