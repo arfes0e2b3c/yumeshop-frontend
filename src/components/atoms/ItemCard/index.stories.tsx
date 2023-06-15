@@ -2,7 +2,7 @@ import { StoryObj, Meta } from '@storybook/react';
 import { ProductCard } from '.';
 
 const meta: Meta<typeof ProductCard> = {
-  title: 'atoms/ItemCard',
+  title: 'atoms/ProductCard',
   component: ProductCard,
 };
 
