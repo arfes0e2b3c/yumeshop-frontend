@@ -9,17 +9,15 @@ const ItemCardContainer = styled.div`
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-  object-fit: cover;
   ${tb`
     width: 200px;
-  `}
+    `}
 `;
 
 const ItemImage = styled(Image)`
   vertical-align: top;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1;
+  object-fit: cover;
 `;
 
 const ItemTitle = styled.div`
