@@ -9,10 +9,18 @@ const meta: Meta<typeof ProductPrice> = {
 export default meta;
 
 type Story = StoryObj<typeof ProductPrice>;
-export const Default: Story = {
+export const Discounted: Story = {
   args: {
     discounted: true,
     originalPrice: 1000,
+    sellingPrice: 500,
+  },
+};
+
+export const Normal: Story = {
+  args: {
+    discounted: false,
+    originalPrice: 500,
     sellingPrice: 500,
   },
 };
