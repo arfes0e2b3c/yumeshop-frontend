@@ -16,3 +16,11 @@ export const Default: Story = {
     color: 'green',
   },
 };
+
+export const LongText: Story = {
+  args: {
+    path: '/tags/f43b4797-f9aa-01dc-6877-115b2a838ef9',
+    name: '新商品新商品新商品新商品新商品新商品新商品新商品新商品新商品',
+    color: 'green',
+  },
+};

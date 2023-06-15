@@ -6,6 +6,9 @@ import styled from 'styled-components';
 
 const Container = styled.section<{ color: string }>`
   width: fit-content;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
   background-color: ${(props) => props.color};
   color: ${colors.White};
 `;
