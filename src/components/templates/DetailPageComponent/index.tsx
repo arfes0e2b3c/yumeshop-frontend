@@ -37,8 +37,15 @@ const InfoContainer = styled.div`
   margin-top: 22px;
 `;
 
-const DescriptionContainer = styled.section`
-  padding: ${spacingSizes.lg};
+const DescriptionSection = styled.section`
+  padding: 0 ${spacingSizes.lg};
+  margin-top: ${spacingSizes.lg};
+  ${tb`
+    padding: 0 ${spacingSizes.md};
+  `}
+  ${mb`
+    padding: 0 ${spacingSizes.sm};
+  `}
 `;
 
 const DescriptionHeader = styled.h2`
