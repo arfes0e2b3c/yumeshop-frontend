@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
+import { colors } from 'src/styles/Tokens';
 import { tb } from 'src/styles/media';
 import styled from 'styled-components';
 
@@ -24,9 +25,10 @@ const ProductImage = styled(Image)`
 
 const ProductTitle = styled.div`
   font-size: 18px;
-  margin: 8px;
+  padding: 8px;
+  background-color: ${colors.White};
   ${tb`
-    margin: 4px;
+    padding: 4px;
   `}
 `;
 
