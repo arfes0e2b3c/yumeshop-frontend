@@ -14,7 +14,7 @@ const Wrapper = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
   ${tb`
       padding: 16px;
   `}
