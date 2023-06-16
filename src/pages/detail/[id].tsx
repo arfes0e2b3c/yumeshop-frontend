@@ -1,4 +1,6 @@
 import { GetStaticPropsContext, NextPage } from 'next';
+import { ProductPrice } from 'src/components/atoms/ProductPrice';
+import { ProductTag } from 'src/components/atoms/ProductTag';
 import { Container } from 'src/styles/Home';
 
 export const getStaticPaths = () => ({
@@ -47,10 +49,34 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
   return { props: { resJson } };
 };
 
-const DetailPage: NextPage<{ resJson: Props }> = ({ resJson }) => (
-  <Container>
-    <div>{resJson.id}</div>
-  </Container>
-);
+const DetailPage: NextPage<{ resJson: Props }> = ({ resJson }) => {
+  const { id, name, thumbnail, price, tags } = resJson;
+  return (
+    <Container>
+      <section>
+        <div>
+          <h1>{name}</h1>
+        </div>
+        <div>
+          <div>
+            {tags.map((tag) => (
+              <ProductTag
+                key={tag.id}
+                path={`/detail/${tag.id}`}
+                name={tag.name}
+                color={tag.color}
+              />
+            ))}
+          </div>
+          <ProductPrice
+            discounted={price.discounted}
+            originalPrice={price.original_price}
+            sellingPrice={price.selling_price}
+          />
+        </div>
+      </section>
+    </Container>
+  );
+};
 
 export default DetailPage;
