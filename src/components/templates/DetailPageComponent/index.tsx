@@ -7,9 +7,12 @@ import { colors, fontSizes, fonts, spacingSizes } from 'src/styles/Tokens';
 import { mb, tb } from 'src/styles/media';
 import styled from 'styled-components';
 
+const Container = styled.div`
+  background-color: ${colors.YumeWhiteGreen};
+`;
+
 const TitleSection = styled.section`
   padding: ${spacingSizes.lg};
-  background-color: ${colors.YumeWhiteGreen};
   ${tb`
     padding: ${spacingSizes.sm} ${spacingSizes.md};
   `}
@@ -33,30 +36,57 @@ const InfoContainer = styled.div`
   margin-top: 22px;
 `;
 
+const DescriptionContainer = styled.section`
+  padding: ${spacingSizes.lg};
+`;
+
+const DescriptionHeader = styled.h2`
+  font-size: ${fontSizes.fontSize24};
+  font-style: ${fonts.NotoSansJP};
+  ${tb`
+    font-size: ${fontSizes.fontSize18};
+  `}
+`;
+
+const DescriptionContent = styled.p`
+  margin-top: ${spacingSizes.sm};
+  font-size: ${fontSizes.fontSize18};
+  font-style: ${fonts.NotoSansJP};
+  ${tb`
+    font-size: ${fontSizes.fontSize12};
+  `}
+`;
+
 export const DetailPageComponent: FC<{ props: DetailPageProps }> = ({
   props,
 }) => {
-  const { id, name, thumbnail, price, tags } = props;
+  const { id, name, thumbnail, price, tags, details } = props;
   return (
-    <TitleSection>
-      <Title>{name}</Title>
-      <InfoContainer>
-        <div>
-          {tags.map((tag) => (
-            <ProductTag
-              key={tag.id}
-              path={`/detail/${tag.id}`}
-              name={tag.name}
-              color={tag.color}
-            />
-          ))}
-        </div>
-        <ProductPrice
-          discounted={price.discounted}
-          originalPrice={price.original_price}
-          sellingPrice={price.selling_price}
-        />
-      </InfoContainer>
-    </TitleSection>
+    <Container>
+      <TitleSection>
+        <Title>{name}</Title>
+        <InfoContainer>
+          <div>
+            {tags.map((tag) => (
+              <ProductTag
+                key={tag.id}
+                path={`/detail/${tag.id}`}
+                name={tag.name}
+                color={tag.color}
+              />
+            ))}
+          </div>
+          <ProductPrice
+            discounted={price.discounted}
+            originalPrice={price.original_price}
+            sellingPrice={price.selling_price}
+          />
+        </InfoContainer>
+      </TitleSection>
+      <DescriptionContainer>
+        <DescriptionHeader>{details[0].header}</DescriptionHeader>
+        <DescriptionContent>{details[0].content}</DescriptionContent>
+      </DescriptionContainer>
+    </Container>
   );
 };
