@@ -93,7 +93,7 @@ const RelatedItemList = styled.div`
 export const DetailPageComponent: FC<{ props: DetailPageProps }> = ({
   props,
 }) => {
-  const { id, name, thumbnail, price, tags, details } = props;
+  const { name, price, tags, details } = props;
   const relatedShopItems = props.related_shop_items;
   return (
     <Container>
