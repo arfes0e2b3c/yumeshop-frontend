@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { ProductCard } from 'src/components/atoms/ProductCard';
 import { ProductPrice } from 'src/components/atoms/ProductPrice';
 import { ProductTag } from 'src/components/atoms/ProductTag';
 // eslint-disable-next-line import/no-cycle
@@ -57,10 +58,36 @@ const DescriptionContent = styled.p`
   `}
 `;
 
+const RelatedItemSection = styled.section`
+  padding: 0 ${spacingSizes.lg} ${spacingSizes.xl};
+  margin-top: ${spacingSizes.lg};
+  ${tb`
+    padding: 0 ${spacingSizes.md} ${spacingSizes.xl};
+  `}
+  ${mb`
+    padding: 0 ${spacingSizes.sm} ${spacingSizes.xl};
+  `}
+`;
+
+const RelatedItemTitle = styled.h2`
+  font-size: ${fontSizes.fontSize24};
+  font-style: ${fonts.NotoSansJP};
+  ${tb`
+    font-size: ${fontSizes.fontSize18};
+  `}
+`;
+
+const RelatedItemList = styled.div`
+  display: flex;
+  margin-top: ${spacingSizes.sm};
+  gap: ${spacingSizes.sm};
+`;
+
 export const DetailPageComponent: FC<{ props: DetailPageProps }> = ({
   props,
 }) => {
   const { id, name, thumbnail, price, tags, details } = props;
+  const relatedShopItems = props.related_shop_items;
   return (
     <Container>
       <TitleSection>
@@ -83,10 +110,23 @@ export const DetailPageComponent: FC<{ props: DetailPageProps }> = ({
           />
         </InfoContainer>
       </TitleSection>
-      <DescriptionContainer>
+      <DescriptionSection>
         <DescriptionHeader>{details[0].header}</DescriptionHeader>
         <DescriptionContent>{details[0].content}</DescriptionContent>
-      </DescriptionContainer>
+      </DescriptionSection>
+      <RelatedItemSection>
+        <RelatedItemTitle>関連商品</RelatedItemTitle>
+        <RelatedItemList>
+          {relatedShopItems.map((item) => (
+            <ProductCard
+              key={item.id}
+              name={item.name}
+              path={`/detail/${item.id}`}
+              thumbnail={item.thumbnail}
+            />
+          ))}
+        </RelatedItemList>
+      </RelatedItemSection>
     </Container>
   );
 };
