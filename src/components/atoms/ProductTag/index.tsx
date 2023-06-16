@@ -4,7 +4,13 @@ import { colors, fontSizes, fonts } from 'src/styles/Tokens';
 import { tb } from 'src/styles/media';
 import styled from 'styled-components';
 
-const Container = styled.section<{ color: string }>`
+type ProductTagProps = {
+  path: string;
+  name: string;
+  color: string;
+};
+
+const Container = styled.section<Pick<ProductTagProps, 'color'>>`
   width: fit-content;
   max-width: 100%;
   overflow: hidden;
@@ -22,12 +28,6 @@ const TagText = styled.p`
     font-size: ${fontSizes.fontSize12};
   `}
 `;
-
-type ProductTagProps = {
-  path: string;
-  name: string;
-  color: string;
-};
 
 export const ProductTag: FC<ProductTagProps> = ({ path, name, color }) => (
   <Link href={path}>
