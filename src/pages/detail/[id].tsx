@@ -1,5 +1,5 @@
 import { GetStaticPropsContext, NextPage } from 'next';
-import { Container } from 'src/styles/Home';
+import { DetailPageComponent } from 'src/components/templates/DetailPageComponent';
 
 export const getStaticPaths = () => ({
   paths: [
@@ -12,7 +12,7 @@ export const getStaticPaths = () => ({
   fallback: true,
 });
 
-type Props = {
+export type DetailPageProps = {
   id: string;
   name: string;
   thumbnail: string;
@@ -43,14 +43,10 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
     `http://127.0.0.1:8080/shop_items/${context.params?.id}`,
   );
   const resJson = await res.json();
-
-  return { props: { resJson } };
+  return { props: { data: resJson } };
 };
 
-const DetailPage: NextPage<{ resJson: Props }> = ({ resJson }) => (
-  <Container>
-    <div>{resJson.id}</div>
-  </Container>
+const DetailPage: NextPage<{ data: DetailPageProps }> = ({ data }) => (
+  <DetailPageComponent props={data} />
 );
-
 export default DetailPage;
